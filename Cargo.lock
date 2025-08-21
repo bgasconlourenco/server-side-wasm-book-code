@@ -223,6 +223,20 @@ dependencies = [
 ]
 
 [[package]]
+name = "composability_bin"
+version = "0.1.0"
+dependencies = [
+ "wit-bindgen-rt 0.44.0",
+]
+
+[[package]]
+name = "composability_lib"
+version = "0.1.0"
+dependencies = [
+ "wit-bindgen-rt 0.44.0",
+]
+
+[[package]]
 name = "core-foundation-sys"
 version = "0.8.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"

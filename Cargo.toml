@@ -5,4 +5,6 @@ members = [
     "chapter03/smartcms_test_host",
     "chapter04/hello_world_wasi/hello_world_wasi_guest/hello_world_wasi_host",
     "chapter04/wasi02/hello_world_wasi02", "chapter04/wasi02/wasi02_lib",
+    "chapter04/wasi02/composability/composability_bin",
+    "chapter04/wasi02/composability/composability_lib"
 ]
