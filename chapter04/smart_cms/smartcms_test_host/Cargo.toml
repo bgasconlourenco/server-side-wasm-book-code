@@ -1,0 +1,8 @@
+[package]
+name = "smartcms_test_host_ch04"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+wasmtime = "30"
+wasmtime-wasi = "30"
