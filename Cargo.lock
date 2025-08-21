@@ -1732,6 +1732,13 @@ dependencies = [
 ]
 
 [[package]]
+name = "wasi02_lib"
+version = "0.1.0"
+dependencies = [
+ "wit-bindgen-rt 0.44.0",
+]
+
+[[package]]
 name = "wasm-bindgen"
 version = "0.2.100"
 source = "registry+https://github.com/rust-lang/crates.io-index"

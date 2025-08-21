@@ -1,14 +1,15 @@
-pub fn add(left: u64, right: u64) -> u64 {
-    left + right
-}
+#[allow(warnings)]
+mod bindings;
 
-#[cfg(test)]
-mod tests {
-    use super::*;
+use bindings::Guest;
 
-    #[test]
-    fn it_works() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
+struct Component;
+
+impl Guest for Component {
+    /// Say hello!
+    fn hello_world() -> String {
+        "Hello, World!".to_string()
     }
 }
+
+bindings::export!(Component with_types_in bindings);
