@@ -1,14 +1,15 @@
-pub fn add(left: u64, right: u64) -> u64 {
-    left + right
+use libsql_bindgen::*;
+use magic_crypt::{new_magic_crypt, MagicCryptTrait};
+
+#[libsql_bindgen::libsql_bindgen]
+pub fn encrypt(data: String, key: String) -> String {
+    let mc = new_magic_crypt!(key, 256);
+    mc.encrypt_str_to_base64(data)
 }
 
-#[cfg(test)]
-mod tests {
-    use super::*;
-
-    #[test]
-    fn it_works() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
-    }
+#[libsql_bindgen::libsql_bindgen]
+pub fn decrypt(data: String, key: String) -> String {
+    let mc = new_magic_crypt!(key, 256);
+    mc.decrypt_base64_to_string(data)
+        .unwrap_or("[ACCESS DENIED]".to_owned())
 }
